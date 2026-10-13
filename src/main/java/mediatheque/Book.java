@@ -19,7 +19,7 @@ public class Book extends Item {
 	public void print() {
 		System.out.println(this);
 	}
-
+	@Override public void accept(Visitor v) { v.visit(this); }
 	@Override
 	public String toString() {
 		return "Livre : " + super.toString() + " de " + author;

@@ -19,7 +19,7 @@ public class CD extends Item {
 	public void print() {
 		System.out.println(this);
 	}
-
+	@Override public void accept(Visitor v) {v.visit(this);}
 	@Override
 	public String toString() {
 		return "CD : " + super.toString() + " (" + numberOfTracks + " titres)";
